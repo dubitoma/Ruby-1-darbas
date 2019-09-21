@@ -1,0 +1,33 @@
+1.
+
+def palindrome?(sentence)
+  downcase_stripped_sentence = sentence.downcase.gsub(" ", "")
+  downcase_stripped_sentence  ==  downcase_stripped_sentence.reverse
+end
+
+palindrome?("Civic")
+
+
+2. 
+
+def sum_of_cubes(a, b)
+  (a..b).inject(0) { |sum, x| sum += (x*x*x) }
+end
+
+sum_of_cubes(1, 3)
+
+3.
+
+def non_duplicated_values(values)
+  values.find_all { |x| values.count(x) == 1 }
+end
+
+non_duplicated_values([1,2,2,3,3,4,5])
+
+4. 
+
+def array_of_fixnums?(array)
+  array.all? { |x| x.is_a? Fixnum }
+end
+
+array_of_fixnums?([1,2,3.5])
